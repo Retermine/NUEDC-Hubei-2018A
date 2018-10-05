@@ -1,0 +1,6 @@
+16:33:00 **** Incremental Build of configuration Debug for project dds ****
+make all 
+make: Nothing to be done for `all'.
+
+16:33:00 Build Finished (took 268ms)
+

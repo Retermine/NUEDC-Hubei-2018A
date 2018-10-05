@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="micro17.bit" key="dds1-bitFile"/>
+	<item value="micro17.bit" key="micro17_hw_platform_2-bitFile"/>
+	<item value="Auto Detect" key="dds1-device"/>
+	<item value="E:\Verilog\first\micro17\micro17.sdk\bootloader\Debug\bootloader.elf" key="micro17_hw_platform_1-microblaze_0-initElf"/>
+	<item value="micro17.mmi" key="dds1-bmmFile"/>
+	<item value="Local" key="micro17_hw_platform_2-target"/>
+	<item value="micro17.bit" key="micro17_hw_platform_1-bitFile"/>
+	<item value="Auto Detect" key="micro17_hw_platform_2-device"/>
+	<item value="Auto Detect" key="micro17_hw_platform_1-device"/>
+	<item value="Local" key="micro17_hw_platform_1-target"/>
+	<item value="false" key="micro17_hw_platform_1-partial_bit"/>
+	<item value="Local" key="dds1-target"/>
+	<item value="false" key="dds1-partial_bit"/>
+	<item value="micro17_hw_platform_2" key="programfpga.hwplatform"/>
+	<item value="false" key="micro17_hw_platform_2-partial_bit"/>
+	<item value="E:\fpga\micro17\micro17.sdk\bootloader\Debug\bootloader.elf" key="dds1-microblaze_0-initElf"/>
+	<item value="micro17.mmi" key="micro17_hw_platform_1-bmmFile"/>
+	<item value="micro17.mmi" key="micro17_hw_platform_2-bmmFile"/>
+	<item value="E:\Verilog\first\micro17\micro17.sdk\bootloader2\Debug\bootloader2.elf" key="micro17_hw_platform_2-microblaze_0-initElf"/>
+</section>

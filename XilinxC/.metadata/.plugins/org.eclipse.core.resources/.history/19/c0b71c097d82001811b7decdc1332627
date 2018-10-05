@@ -1,0 +1,164 @@
+/*
+ * gui.c
+ *
+ *  Created on: 2018Äê6ÔÂ3ÈÕ
+ *      Author: hxflq
+ */
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "lcd/lcd.h"
+#include "lcd/delay.h"
+#include "tftcontroller.h"
+#include "lcd/gui.h"
+#include "xil_io.h"
+#include "touch/gt9147.h"
+#include "gui.h"
+#include "xgpio.h"
+#include "ad9854.h"
+extern u16 x,y;
+extern XGpio freqw;
+void gui()
+{
+		LCD_ShowChar(60, 650, '1', RED);
+		LCD_ShowChar(230, 650, '2', RED);
+		LCD_ShowChar(400, 650, '3', RED);
+		LCD_ShowChar(60, 550, '4', RED);
+		LCD_ShowChar(230, 550, '5', RED);
+		LCD_ShowString(400, 550, "6", RED);
+		LCD_ShowString(60, 450, "7", RED);
+		LCD_ShowString(230, 450, "8", RED);
+		LCD_ShowString(400, 450, "9", RED);
+		LCD_ShowString(60, 750, "0", RED);
+		LCD_ShowString(315, 750, "set", RED);
+		LCD_ShowString(10, 250, "set", RED);
+		LCD_ShowString(10, 275 , "actul", RED);
+}
+
+volatile char fz [2]={0};
+u32 scan(u32 setf)
+{
+//	u32 setf;
+//	setf=0;
+
+	if(GT9147_Scan())
+	{
+		if((x)>400&&(x)<500)
+		{	if((y)>0&&(y)<120)
+				{
+			setf=setf*10+9;
+
+		LCD_Fill(130,230,320,270,BLACK);
+
+		    	    	sprintf(fz,"%d",setf);
+		    	    	LCD_ShowString(130,250,fz,RED);
+				}
+			if((y)>170&&(y)<290)
+			{
+				setf=setf*10+8;
+			    LCD_Fill(130,230,320,270,BLACK);
+				sprintf(fz,"%d",setf);
+				LCD_ShowString(130,250,fz,RED);
+			}
+			if((y)>340&&(y)<480)
+			{
+				setf=setf*10+7;
+				LCD_Fill(130,230,320,270,BLACK);
+				sprintf(fz,"%d",setf);
+				LCD_ShowString(130,250,fz,RED);
+		}
+		}
+		if((x)>500&&(x)<600)
+				{	if((y)>0&&(y)<130)
+						{
+					setf=setf*10+6;
+				LCD_Fill(130,230,320,270,BLACK);
+
+				    	    	sprintf(fz,"%d",setf);
+				    	    	LCD_ShowString(130,250,fz,RED);
+						}
+					if((y)>170&&(y)<290)
+					{
+						setf=setf*10+5;
+					    LCD_Fill(130,230,320,270,BLACK);
+						sprintf(fz,"%d",setf);
+						LCD_ShowString(130,250,fz,RED);
+					}
+					if((y)>340&&(y)<460)
+					{
+						setf=setf*10+4;
+						LCD_Fill(130,230,320,270,BLACK);
+						sprintf(fz,"%d",setf);
+						LCD_ShowString(130,250,fz,RED);
+					}
+				}
+
+
+
+
+				if((x)>600&&(x)<700)
+					{	if((y)>0&&(y)<130)
+					{
+							setf=setf*10+3;
+					LCD_Fill(130,230,320,270,BLACK);
+
+					    	    	sprintf(fz,"%d",setf);
+					    	    	LCD_ShowString(130,250,fz,RED);
+					}
+						if((y)>170&&(y)<290)
+						{
+							setf=setf*10+2;
+						    LCD_Fill(130,230,320,270,BLACK);
+							sprintf(fz,"%d",setf);
+							LCD_ShowString(130,250,fz,RED);
+						}
+						if((y)>340&&(y)<460)
+						{
+							setf=setf*10+1;
+							LCD_Fill(130,230,320,270,BLACK);
+							sprintf(fz,"%d",setf);
+							LCD_ShowString(130,250,fz,RED);
+						}
+					}
+				if((x)>700&&(x)<850)
+									{	if((y)>360&&(y)<480)
+									{
+											setf=setf*10;
+									LCD_Fill(130,230,320,270,BLACK);
+
+									    	    	sprintf(fz,"%d",setf);
+									    	    	LCD_ShowString(130,250,fz,RED);
+									}
+										if((y)>100&&(y)<230)
+										{
+
+
+
+										///
+										float a=1431655.765;
+										float freqwa=setf*1.0;
+										freqwa=a*freqwa;
+										u32 freq;
+										freq=freqwa;
+										printf("freqw=%x\n",freq);
+										AD9854_mWriteReg(XPAR_AD9854_0_S00_AXI_BASEADDR,AD9854_S00_AXI_SLV_REG0_OFFSET,freq);
+										u32 b;
+										b=AD9854_mReadReg(XPAR_AD9854_0_S00_AXI_BASEADDR,AD9854_S00_AXI_SLV_REG0_OFFSET);
+										printf("reg0=%x\n",b);
+
+										AD9854_mWriteReg(XPAR_AD9854_0_S00_AXI_BASEADDR, AD9854_S00_AXI_SLV_REG1_OFFSET, 0x00000001);
+										__asm("nop");
+										AD9854_mWriteReg(XPAR_AD9854_0_S00_AXI_BASEADDR, AD9854_S00_AXI_SLV_REG1_OFFSET, 0x00000000);
+
+										LCD_Fill(130,280,320,320,BLACK);
+										sprintf(fz,"%d",setf);
+										LCD_ShowString(130,290,fz,RED);
+										setf=0;
+
+										}
+
+									}
+				printf("f=%x\n",setf);
+		}
+	return setf;
+}

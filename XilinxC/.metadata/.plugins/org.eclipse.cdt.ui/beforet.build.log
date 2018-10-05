@@ -1,0 +1,184 @@
+09:42:13 **** Auto Build of configuration Debug for project beforet ****
+make all 
+'Building file: ../src/touch/ctiic.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/ctiic.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/ctiic.d" -MT"src/touch/ctiic.o" -o "src/touch/ctiic.o" "../src/touch/ctiic.c"
+'Finished building: ../src/touch/ctiic.c'
+' '
+'Building file: ../src/touch/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/delay.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/delay.d" -MT"src/touch/delay.o" -o "src/touch/delay.o" "../src/touch/delay.c"
+'Finished building: ../src/touch/delay.c'
+' '
+'Building file: ../src/touch/gt9147.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/gt9147.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/gt9147.d" -MT"src/touch/gt9147.o" -o "src/touch/gt9147.o" "../src/touch/gt9147.c"
+../src/touch/gt9147.c: In function 'GT9147_Scan':
+../src/touch/gt9147.c:165:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(10);
+  ^~~~~~~~
+'Finished building: ../src/touch/gt9147.c'
+' '
+'Building file: ../src/lcd/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/delay.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/delay.d" -MT"src/lcd/delay.o" -o "src/lcd/delay.o" "../src/lcd/delay.c"
+'Finished building: ../src/lcd/delay.c'
+' '
+'Building file: ../src/lcd/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/gui.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/gui.d" -MT"src/lcd/gui.o" -o "src/lcd/gui.o" "../src/lcd/gui.c"
+'Finished building: ../src/lcd/gui.c'
+' '
+'Building file: ../src/lcd/lcd.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/lcd.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/lcd.d" -MT"src/lcd/lcd.o" -o "src/lcd/lcd.o" "../src/lcd/lcd.c"
+'Finished building: ../src/lcd/lcd.c'
+' '
+'Building file: ../src/frenquency.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frenquency.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frenquency.d" -MT"src/frenquency.o" -o "src/frenquency.o" "../src/frenquency.c"
+../src/frenquency.c: In function 'read_freq':
+../src/frenquency.c:56:11: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   sprintf(fz,"%f",f);
+           ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:58:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(125,250,fz,RED);
+                         ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:67:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%f",f);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:69:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(125,300,fz,RED);
+                         ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:77:11: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   sprintf(fz,"%f",f);
+           ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:79:26: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   LCD_ShowString(125,300,fz,RED);
+                          ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:97:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%f",dsum);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:99:26: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   LCD_ShowString(125,500,fz,RED);
+                          ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:122:13: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     sprintf(fz,"%f",inter);
+             ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:124:28: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     LCD_ShowString(125,700,fz,RED);
+                            ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:134:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%f",inter);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:136:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(125,700,fz,RED);
+                               ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/frenquency.c:146:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%f",inter);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/frenquency.c:8:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/frenquency.c:148:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(125,700,fz,RED);
+                               ^~
+In file included from ../src/frenquency.c:11:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/frenquency.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:5: warning: implicit declaration of function 'gui_freq' [-Wimplicit-function-declaration]
+     gui_freq();
+     ^~~~~~~~
+../src/helloworld.c:74:5: warning: implicit declaration of function 'read_freq' [-Wimplicit-function-declaration]
+     read_freq();
+     ^~~~~~~~~
+../src/helloworld.c:69:11: warning: unused variable 'a' [-Wunused-variable]
+     { u32 a;
+           ^
+../src/helloworld.c:65:9: warning: unused variable 'setf' [-Wunused-variable]
+     u32 setf=0;
+         ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../beforet_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: beforet.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../beforet_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "beforet.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/delay.o ./src/lcd/gui.o ./src/lcd/lcd.o  ./src/frenquency.o ./src/gui.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: beforet.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size beforet.elf  |tee "beforet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76744	   1556	2098420	2176720	 2136d0	beforet.elf
+'Finished building: beforet.elf.size'
+' '
+
+09:42:18 Build Finished (took 4s.567ms)
+

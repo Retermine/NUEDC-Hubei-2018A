@@ -1,0 +1,51 @@
+19:03:21 **** Build of configuration Debug for project zz ****
+make all 
+'Building file: ../src/touch/ctiic.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/ctiic.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/ctiic.d" -MT"src/touch/ctiic.o" -o "src/touch/ctiic.o" "../src/touch/ctiic.c"
+'Finished building: ../src/touch/ctiic.c'
+' '
+'Building file: ../src/touch/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/delay.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/delay.d" -MT"src/touch/delay.o" -o "src/touch/delay.o" "../src/touch/delay.c"
+'Finished building: ../src/touch/delay.c'
+' '
+'Building file: ../src/touch/gt9147.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/gt9147.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/gt9147.d" -MT"src/touch/gt9147.o" -o "src/touch/gt9147.o" "../src/touch/gt9147.c"
+../src/touch/gt9147.c: In function 'GT9147_Scan':
+../src/touch/gt9147.c:165:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(10);
+  ^~~~~~~~
+'Finished building: ../src/touch/gt9147.c'
+' '
+'Building file: ../src/lcd/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/delay.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/delay.d" -MT"src/lcd/delay.o" -o "src/lcd/delay.o" "../src/lcd/delay.c"
+'Finished building: ../src/lcd/delay.c'
+' '
+'Building file: ../src/lcd/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/gui.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/gui.d" -MT"src/lcd/gui.o" -o "src/lcd/gui.o" "../src/lcd/gui.c"
+'Finished building: ../src/lcd/gui.c'
+' '
+'Building file: ../src/lcd/lcd.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/lcd.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/lcd.d" -MT"src/lcd/lcd.o" -o "src/lcd/lcd.o" "../src/lcd/lcd.c"
+../src/lcd/lcd.c: In function 'LCD_Init':
+../src/lcd/lcd.c:353:5: warning: unused variable 'a' [-Wunused-variable]
+  u8 a=1;
+     ^
+'Finished building: ../src/lcd/lcd.c'
+' '
+'Building file: ../src/frequency.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frequency.o" -I../../zz_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frequency.d" -MT"src/frequency.o" -o "src/frequency.o" "../src/frequency.c"
+../src/frequency.c:24:16: fatal error: fx.h: No such file or directory
+ #include "fx.h"
+                ^
+compilation terminated.
+make: *** [src/frequency.o] ´íÎó 1
+
+19:03:24 Build Finished (took 3s.631ms)
+

@@ -1,0 +1,849 @@
+12:42:48 **** Auto Build of configuration Debug for project 12_06 ****
+make all 
+'Building file: ../src/touch/ctiic.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/ctiic.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/ctiic.d" -MT"src/touch/ctiic.o" -o "src/touch/ctiic.o" "../src/touch/ctiic.c"
+'Finished building: ../src/touch/ctiic.c'
+' '
+'Building file: ../src/touch/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/delay.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/delay.d" -MT"src/touch/delay.o" -o "src/touch/delay.o" "../src/touch/delay.c"
+'Finished building: ../src/touch/delay.c'
+' '
+'Building file: ../src/touch/gt9147.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/gt9147.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/gt9147.d" -MT"src/touch/gt9147.o" -o "src/touch/gt9147.o" "../src/touch/gt9147.c"
+../src/touch/gt9147.c: In function 'GT9147_Scan':
+../src/touch/gt9147.c:165:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(10);
+  ^~~~~~~~
+'Finished building: ../src/touch/gt9147.c'
+' '
+'Building file: ../src/lcd/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/delay.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/delay.d" -MT"src/lcd/delay.o" -o "src/lcd/delay.o" "../src/lcd/delay.c"
+'Finished building: ../src/lcd/delay.c'
+' '
+'Building file: ../src/lcd/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/gui.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/gui.d" -MT"src/lcd/gui.o" -o "src/lcd/gui.o" "../src/lcd/gui.c"
+'Finished building: ../src/lcd/gui.c'
+' '
+'Building file: ../src/lcd/lcd.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/lcd.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/lcd.d" -MT"src/lcd/lcd.o" -o "src/lcd/lcd.o" "../src/lcd/lcd.c"
+'Finished building: ../src/lcd/lcd.c'
+' '
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../12_06_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+../src/gui.c: In function 'scan':
+../src/gui.c:182:5: warning: implicit declaration of function 'mod_sweep' [-Wimplicit-function-declaration]
+     mod_sweep(setf);
+     ^~~~~~~~~
+../src/gui.c:194:21: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+             sprintf(fz,"%d",setf);
+                     ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:194:26: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+             sprintf(fz,"%d",setf);
+                          ^
+../src/gui.c:195:36: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+             LCD_ShowString(225,250,fz,RED);
+                                    ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:201:13: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     sprintf(fz,"%d",setf);
+             ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:201:18: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     sprintf(fz,"%d",setf);
+                  ^
+../src/gui.c:202:28: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     LCD_ShowString(225,250,fz,RED);
+                            ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:208:13: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     sprintf(fz,"%d",setf);
+             ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:208:18: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     sprintf(fz,"%d",setf);
+                  ^
+../src/gui.c:209:28: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     LCD_ShowString(225,250,fz,RED);
+                            ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:218:23: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+               sprintf(fz,"%d",setf);
+                       ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:218:28: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+               sprintf(fz,"%d",setf);
+                            ^
+../src/gui.c:219:38: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+               LCD_ShowString(225,250,fz,RED);
+                                      ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:225:15: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       sprintf(fz,"%d",setf);
+               ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:225:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       sprintf(fz,"%d",setf);
+                    ^
+../src/gui.c:226:30: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       LCD_ShowString(225,250,fz,RED);
+                              ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:232:15: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       sprintf(fz,"%d",setf);
+               ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:232:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       sprintf(fz,"%d",setf);
+                    ^
+../src/gui.c:233:30: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       LCD_ShowString(225,250,fz,RED);
+                              ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:246:24: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                sprintf(fz,"%d",setf);
+                        ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:246:29: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+                sprintf(fz,"%d",setf);
+                             ^
+../src/gui.c:247:39: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                LCD_ShowString(225,250,fz,RED);
+                                       ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:253:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:253:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:254:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,250,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:260:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:260:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:261:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,250,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:270:28: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                    sprintf(fz,"%d",setf);
+                            ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:270:33: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+                    sprintf(fz,"%d",setf);
+                                 ^
+../src/gui.c:271:43: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                    LCD_ShowString(225,250,fz,RED);
+                                           ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:277:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",setf);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:277:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",setf);
+                        ^
+../src/gui.c:279:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,275,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:283:34: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("afterrst_reg1=%x\n",b);
+                                  ^
+../src/gui.c:287:34: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("clearrst_reg1=%x\n",b);
+                                  ^
+../src/gui.c:300:26: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("freqw=%x\n",freq);
+                          ^
+../src/gui.c:304:25: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("reg0=%x\n",b);
+                         ^
+../src/gui.c:311:34: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("after_set_a_f=%x\n",b);
+                                  ^
+../src/gui.c:315:35: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("after_srt_reg1=%x\n",b);
+                                   ^
+../src/gui.c:319:35: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("after_srt_reg1=%x\n",b);
+                                   ^
+../src/gui.c:322:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",setf);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:322:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",setf);
+                        ^
+../src/gui.c:323:22: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           printf("f=%x\n",setf);
+                      ^
+../src/gui.c:324:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,275,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c: At top level:
+../src/gui.c:335:6: warning: conflicting types for 'mod_sweep'
+ void mod_sweep( u32 setf)
+      ^~~~~~~~~
+../src/gui.c:182:5: note: previous implicit declaration of 'mod_sweep' was here
+     mod_sweep(setf);
+     ^~~~~~~~~
+../src/gui.c: In function 'mod_sweep':
+../src/gui.c:355:37: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf("before_set_state_2 reg3=%x\n",b);
+                                     ^
+../src/gui.c:370:6: warning: implicit declaration of function 'mod_single' [-Wimplicit-function-declaration]
+      mod_single();
+      ^~~~~~~~~~
+../src/gui.c:375:6: warning: implicit declaration of function 'mod_graph' [-Wimplicit-function-declaration]
+      mod_graph(min,step,max);
+      ^~~~~~~~~
+../src/gui.c:386:22: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+              sprintf(fz,"%d",setf);
+                      ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:386:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+              sprintf(fz,"%d",setf);
+                           ^
+../src/gui.c:387:37: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+              LCD_ShowString(225,200,fz,RED);
+                                     ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:393:14: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      sprintf(fz,"%d",setf);
+              ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:393:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+      sprintf(fz,"%d",setf);
+                   ^
+../src/gui.c:394:29: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      LCD_ShowString(225,200,fz,RED);
+                             ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:400:14: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      sprintf(fz,"%d",setf);
+              ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:400:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+      sprintf(fz,"%d",setf);
+                   ^
+../src/gui.c:401:29: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      LCD_ShowString(225,200,fz,RED);
+                             ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:410:24: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                sprintf(fz,"%d",setf);
+                        ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:410:29: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+                sprintf(fz,"%d",setf);
+                             ^
+../src/gui.c:411:39: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                LCD_ShowString(225,200,fz,RED);
+                                       ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:417:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:417:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:418:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,200,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:424:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:424:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:425:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,200,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:436:25: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                 sprintf(fz,"%d",setf);
+                         ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:436:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+                 sprintf(fz,"%d",setf);
+                              ^
+../src/gui.c:437:40: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+                 LCD_ShowString(225,200,fz,RED);
+                                        ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:443:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         sprintf(fz,"%d",setf);
+                 ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:443:22: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+         sprintf(fz,"%d",setf);
+                      ^
+../src/gui.c:444:32: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         LCD_ShowString(225,200,fz,RED);
+                                ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:450:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         sprintf(fz,"%d",setf);
+                 ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:450:22: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+         sprintf(fz,"%d",setf);
+                      ^
+../src/gui.c:451:32: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         LCD_ShowString(225,200,fz,RED);
+                                ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:460:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",setf);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:460:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",setf);
+                        ^
+../src/gui.c:461:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,200,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:470:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:470:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:471:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,200,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:490:22: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("setf=%x\n",setf);
+                      ^
+../src/gui.c:502:24: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("frqsum=%x\n",b);
+                        ^
+../src/gui.c:512:32: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("after_srt_reg1=%x\n",b);
+                                ^
+../src/gui.c:514:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:514:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:515:19: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("f=%x\n",setf);
+                   ^
+../src/gui.c:516:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,250,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:531:30: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("state_1 reg3=%x\n",b);
+                              ^
+../src/gui.c:535:40: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("after_set_state_1 reg3=%x\n",b);
+                                        ^
+../src/gui.c:548:16: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        sprintf(fz,"%d",setf);
+                ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:548:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        sprintf(fz,"%d",setf);
+                     ^
+../src/gui.c:549:19: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+        printf("f=%x\n",setf);
+                   ^
+../src/gui.c:550:31: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        LCD_ShowString(225,350,fz,RED);
+                               ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:570:45: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("after_set_state_2 reg1_cnt1m=%x\n",b);
+                                             ^
+../src/gui.c:573:40: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("before_set_state_2 reg3=%x\n",b);
+                                        ^
+../src/gui.c:587:34: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("after_set_am_reg2=%x\n",b);
+                                  ^
+../src/gui.c:595:39: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("after_set_state_2 reg3=%x\n",b);
+                                       ^
+../src/gui.c:617:15: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       sprintf(fz,"%d",setf);
+               ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:617:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       sprintf(fz,"%d",setf);
+                    ^
+../src/gui.c:618:18: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("f=%x\n",setf);
+                  ^
+../src/gui.c:619:30: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       LCD_ShowString(225,300,fz,RED);
+                              ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c: At top level:
+../src/gui.c:634:6: warning: conflicting types for 'mod_single'
+ void mod_single()
+      ^~~~~~~~~~
+../src/gui.c:370:6: note: previous implicit declaration of 'mod_single' was here
+      mod_single();
+      ^~~~~~~~~~
+../src/gui.c: In function 'mod_single':
+../src/gui.c:645:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("I=%d,Q=%d\n",I,Q);
+             ^
+../src/gui.c:645:18: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("I=%d,Q=%d\n",I,Q);
+                  ^
+../src/gui.c:662:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",I);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:662:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",I);
+                        ^
+../src/gui.c:663:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,300,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:664:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",Q);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:664:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",Q);
+                        ^
+../src/gui.c:665:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,250,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:666:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%d",b);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:666:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+           sprintf(fz,"%d",b);
+                        ^
+../src/gui.c:667:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,200,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:668:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%f",phase);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:669:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,400,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:670:19: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           sprintf(fz,"%f",product);
+                   ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:671:34: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+           LCD_ShowString(225,350,fz,RED);
+                                  ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:655:12: warning: unused variable 'range' [-Wunused-variable]
+     double range=2*product/(ampli);
+            ^~~~~
+../src/gui.c: At top level:
+../src/gui.c:694:6: warning: conflicting types for 'mod_graph'
+ void mod_graph(int min,int step,int max)
+      ^~~~~~~~~
+../src/gui.c:375:6: note: previous implicit declaration of 'mod_graph' was here
+      mod_graph(min,step,max);
+      ^~~~~~~~~
+../src/gui.c: In function 'mod_graph':
+../src/gui.c:700:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",min);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:701:24: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(80,325,fz,RED);
+                        ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:702:24: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(80,625,fz,RED);
+                        ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:704:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",min+quarter);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:705:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(150,325,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:706:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(150,625,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:707:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",min+2*quarter);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:708:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(198,325,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:709:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(198,625,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:710:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",min+3*quarter);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:711:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(270,325,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:712:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(270,625,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:713:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",min+4*quarter);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:714:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(335,325,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:715:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(335,625,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:716:10: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  sprintf(fz,"%d",max);
+          ^~
+In file included from d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/gui.c:7:
+d:\vivado17.4\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:225:5: note: expected 'char * restrict' but argument is of type 'volatile char *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../src/gui.c:717:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(405,325,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:718:25: warning: passing argument 3 of 'LCD_ShowString' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  LCD_ShowString(405,625,fz,RED);
+                         ^~
+In file included from ../src/gui.c:10:0:
+../src/lcd/lcd.h:99:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void LCD_ShowString(u16 x,u16 y,char *p, u16 COLOR);
+      ^~~~~~~~~~~~~~
+../src/gui.c:752:26: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf("before_cnt2s=%d \n",cnt2s);
+                          ^
+../src/gui.c:755:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf("cnt2s=%d \n",cnt2s);
+                   ^
+../src/gui.c:785:2: warning: implicit declaration of function 'LCD_fill' [-Wimplicit-function-declaration]
+  LCD_fill();
+  ^~~~~~~~
+../src/gui.c:733:6: warning: unused variable 'ii' [-Wunused-variable]
+  int ii;
+      ^~
+../src/gui.c: At top level:
+../src/gui.c:851:1: error: expected identifier or '(' before '{' token
+ {
+ ^
+make: *** [src/gui.o] ´íÎó 1
+
+12:42:52 Build Finished (took 4s.332ms)
+

@@ -1,0 +1,702 @@
+12:36:31 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+make: Nothing to be done for `all'.
+12:37:37 **** Auto Build of configuration Debug for project bootloader2 ****
+make all 
+'Building file: ../src/bootloader.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -Os -c -fmessage-length=0 -MT"src/bootloader.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bootloader.d" -MT"src/bootloader.o" -o "src/bootloader.o" "../src/bootloader.c"
+../src/bootloader.c:29:2: warning: #warning "Please correct the 8 definitions below!" [-Wcpp]
+ #warning "Please correct the 8 definitions below!"
+  ^~~~~~~
+'Finished building: ../src/bootloader.c'
+' '
+'Building target: bootloader2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "bootloader2.elf"  ./src/bootloader.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bootloader2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bootloader2.elf  |tee "bootloader2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8144	    360	   2712	  11216	   2bd0	bootloader2.elf
+'Finished building: bootloader2.elf.size'
+' '
+12:40:15 **** Auto Build of configuration Debug for project 7_22 ****
+make all 
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+../src/gui.c: In function 'GUI_Init':
+../src/gui.c:22:35: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(10,5,250,20,24,"Spectrum Inspector");
+                                   ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:26:38: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(750,440,100,40,24,"Hz");
+                                      ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:41:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(290,43,150,20,24,"ScaleY");
+                                  ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:44:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(440,43,80,20,24,"Acquire");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:47:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(630,43,80,20,24,"ScaleX");
+                                 ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:50:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(100,43,80,20,24,"Vpp/Amp");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:52:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,100,95,20,24,"x1");
+                                 ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:53:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,130,95,20,24,"Vpp");
+                                 ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'Spectrum_Renew':
+../src/gui.c:149:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,410-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:150:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,390-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:160:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,420-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:161:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,400-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:170:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:171:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+55,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:173:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-40,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:174:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-35,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'scaley_f':
+../src/gui.c:204:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x1");
+                                  ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:207:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x10");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'siwtch_f':
+../src/gui.c:235:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Vpp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:238:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Amp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/gui.c'
+' '
+'Building target: 7_22.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "7_22.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/ILI93.o ./src/lcd/delay.o  ./src/dataprocess.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_22.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size 7_22.elf  |tee "7_22.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 165292	   1592	33855860	34022744	2072558	7_22.elf
+'Finished building: 7_22.elf.size'
+' '
+12:41:05 **** Auto Build of configuration Debug for project bootloader2 ****
+make all 
+'Building file: ../src/bootloader.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -Os -c -fmessage-length=0 -MT"src/bootloader.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bootloader.d" -MT"src/bootloader.o" -o "src/bootloader.o" "../src/bootloader.c"
+../src/bootloader.c:29:2: warning: #warning "Please correct the 8 definitions below!" [-Wcpp]
+ #warning "Please correct the 8 definitions below!"
+  ^~~~~~~
+'Finished building: ../src/bootloader.c'
+' '
+'Building target: bootloader2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "bootloader2.elf"  ./src/bootloader.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bootloader2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bootloader2.elf  |tee "bootloader2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8144	    360	   2712	  11216	   2bd0	bootloader2.elf
+'Finished building: bootloader2.elf.size'
+' '
+12:52:59 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+../src/gui.c: In function 'GUI_Init':
+../src/gui.c:22:35: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(10,5,250,20,24,"Spectrum Inspector");
+                                   ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:26:38: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(750,440,100,40,24,"Hz");
+                                      ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:41:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(290,43,150,20,24,"ScaleY");
+                                  ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:44:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(440,43,80,20,24,"Acquire");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:47:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(630,43,80,20,24,"ScaleX");
+                                 ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:50:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(100,43,80,20,24,"Vpp/Amp");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:52:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,100,95,20,24,"x1");
+                                 ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:53:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,130,95,20,24,"Vpp");
+                                 ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'Spectrum_Renew':
+../src/gui.c:149:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,410-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:150:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,390-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:160:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,420-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:161:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,400-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:170:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:171:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+55,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:173:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-40,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:174:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-35,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'scaley_f':
+../src/gui.c:204:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x1");
+                                  ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:207:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x10");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'siwtch_f':
+../src/gui.c:235:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Vpp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:238:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Amp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/gui.c'
+' '
+'Building target: 7_22.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "7_22.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/ILI93.o ./src/lcd/delay.o  ./src/dataprocess.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_22.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size 7_22.elf  |tee "7_22.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 165480	   1592	33855856	34022928	2072610	7_22.elf
+'Finished building: 7_22.elf.size'
+' '
+12:55:50 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+make: Nothing to be done for `all'.
+12:56:26 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+../src/gui.c: In function 'GUI_Init':
+../src/gui.c:22:35: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(10,5,250,20,24,"Spectrum Inspector");
+                                   ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:26:38: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(750,440,100,40,24,"Hz");
+                                      ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:41:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(290,43,150,20,24,"ScaleY");
+                                  ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:44:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(440,43,80,20,24,"Acquire");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:47:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(630,43,80,20,24,"ScaleX");
+                                 ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:50:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(100,43,80,20,24,"Vpp/Amp");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:52:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,100,95,20,24,"x1");
+                                 ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:53:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,130,95,20,24,"Vpp");
+                                 ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'Spectrum_Renew':
+../src/gui.c:149:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,410-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:150:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,390-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:160:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,420-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:161:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,400-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:170:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:171:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+55,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:173:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-40,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:174:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-35,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'scaley_f':
+../src/gui.c:204:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x1");
+                                  ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:207:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x10");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'siwtch_f':
+../src/gui.c:235:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Vpp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:238:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Amp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/gui.c'
+' '
+'Building target: 7_22.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "7_22.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/ILI93.o ./src/lcd/delay.o  ./src/dataprocess.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_22.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size 7_22.elf  |tee "7_22.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 165292	   1592	33855860	34022744	2072558	7_22.elf
+'Finished building: 7_22.elf.size'
+' '
+13:40:09 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+make: Nothing to be done for `all'.
+13:44:59 **** Incremental Build of configuration Debug for project 7_22 ****
+make all 
+make: Nothing to be done for `all'.
+16:11:11 **** Auto Build of configuration Debug for project 7_22 ****
+make all 
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../7_22_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+../src/gui.c: In function 'GUI_Init':
+../src/gui.c:22:35: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(10,5,250,20,24,"Spectrum Inspector");
+                                   ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:26:38: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(750,440,100,40,24,"Hz");
+                                      ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:41:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(290,43,150,20,24,"ScaleY");
+                                  ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:44:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(440,43,80,20,24,"Acquire");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:47:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(630,43,80,20,24,"ScaleX");
+                                 ^~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:50:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(100,43,80,20,24,"Vpp/Amp");
+                                 ^~~~~~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:52:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,100,95,20,24,"x1");
+                                 ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:53:33: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  LCD_ShowString(10,130,95,20,24,"Vpp");
+                                 ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'Spectrum_Renew':
+../src/gui.c:149:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,410-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:150:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,390-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:160:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,420-maxy,100,20,12,temp1);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:161:50: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-20,400-maxy,100,20,12,temp2);
+                                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:170:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+50,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:171:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx+55,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:173:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-40,140,100,20,12,temp1);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:174:45: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+        LCD_ShowString(maxx-35,120,100,20,12,temp2);
+                                             ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'scaley_f':
+../src/gui.c:204:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x1");
+                                  ^~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:207:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,100,95,20,24,"x10");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c: In function 'siwtch_f':
+../src/gui.c:235:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Vpp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/gui.c:238:34: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+   LCD_ShowString(10,130,95,20,24,"Amp");
+                                  ^~~~~
+In file included from ../src/gui.c:2:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/gui.c'
+' '
+'Building target: 7_22.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_22_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "7_22.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/ILI93.o ./src/lcd/delay.o  ./src/dataprocess.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_22.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size 7_22.elf  |tee "7_22.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 165292	   1592	33855860	34022744	2072558	7_22.elf
+'Finished building: 7_22.elf.size'
+' '

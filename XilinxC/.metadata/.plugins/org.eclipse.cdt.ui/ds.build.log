@@ -1,0 +1,106 @@
+16:45:17 **** Build of configuration Debug for project ds ****
+make all 
+'Building file: ../src/touch/ctiic.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/ctiic.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/ctiic.d" -MT"src/touch/ctiic.o" -o "src/touch/ctiic.o" "../src/touch/ctiic.c"
+'Finished building: ../src/touch/ctiic.c'
+' '
+'Building file: ../src/touch/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/delay.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/delay.d" -MT"src/touch/delay.o" -o "src/touch/delay.o" "../src/touch/delay.c"
+'Finished building: ../src/touch/delay.c'
+' '
+'Building file: ../src/touch/gt9147.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/touch/gt9147.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/touch/gt9147.d" -MT"src/touch/gt9147.o" -o "src/touch/gt9147.o" "../src/touch/gt9147.c"
+../src/touch/gt9147.c: In function 'GT9147_Scan':
+../src/touch/gt9147.c:165:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(10);
+  ^~~~~~~~
+'Finished building: ../src/touch/gt9147.c'
+' '
+'Building file: ../src/lcd/delay.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/delay.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/delay.d" -MT"src/lcd/delay.o" -o "src/lcd/delay.o" "../src/lcd/delay.c"
+'Finished building: ../src/lcd/delay.c'
+' '
+'Building file: ../src/lcd/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/gui.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/gui.d" -MT"src/lcd/gui.o" -o "src/lcd/gui.o" "../src/lcd/gui.c"
+'Finished building: ../src/lcd/gui.c'
+' '
+'Building file: ../src/lcd/lcd.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lcd/lcd.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd/lcd.d" -MT"src/lcd/lcd.o" -o "src/lcd/lcd.o" "../src/lcd/lcd.c"
+../src/lcd/lcd.c: In function 'LCD_Init':
+../src/lcd/lcd.c:353:5: warning: unused variable 'a' [-Wunused-variable]
+  u8 a=1;
+     ^
+'Finished building: ../src/lcd/lcd.c'
+' '
+'Building file: ../src/FFT.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FFT.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/FFT.d" -MT"src/FFT.o" -o "src/FFT.o" "../src/FFT.c"
+'Finished building: ../src/FFT.c'
+' '
+'Building file: ../src/dataprocess.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dataprocess.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dataprocess.d" -MT"src/dataprocess.o" -o "src/dataprocess.o" "../src/dataprocess.c"
+'Finished building: ../src/dataprocess.c'
+' '
+'Building file: ../src/dataspl.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dataspl.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dataspl.d" -MT"src/dataspl.o" -o "src/dataspl.o" "../src/dataspl.c"
+../src/dataspl.c:21:8: warning: type defaults to 'int' in declaration of 'smpfull' [-Wimplicit-int]
+ extern smpfull;
+        ^~~~~~~
+'Finished building: ../src/dataspl.c'
+' '
+'Building file: ../src/gui.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gui.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
+'Finished building: ../src/gui.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:14: warning: value computed is not used [-Wunused-value]
+       smpfull==0;
+       ~~~~~~~^~~
+../src/helloworld.c:90:21: warning: variable 'fftsts' set but not used [-Wunused-but-set-variable]
+       unsigned char fftsts;
+                     ^~~~~~
+../src/helloworld.c:84:13: warning: unused variable 'a' [-Wunused-variable]
+     { float a;
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../ds_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+../src/timer.c: In function 'InitIntc':
+../src/timer.c:33:6: warning: unused variable 'sts' [-Wunused-variable]
+  int sts;
+      ^~~
+'Finished building: ../src/timer.c'
+' '
+'Building target: ds.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ds_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "ds.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/delay.o ./src/lcd/gui.o ./src/lcd/lcd.o  ./src/FFT.o ./src/dataprocess.o ./src/dataspl.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ds.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ds.elf  |tee "ds.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  48772	   1456	 393620	 443848	  6c5c8	ds.elf
+'Finished building: ds.elf.size'
+' '
+
+16:45:23 Build Finished (took 5s.950ms)
+

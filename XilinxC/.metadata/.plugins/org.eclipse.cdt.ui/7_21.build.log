@@ -1,0 +1,37 @@
+21:02:39 **** Auto Build of configuration Debug for project 7_21 ****
+make all 
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../7_21_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+../src/timer.c: In function 'ScanScreen':
+../src/timer.c:104:5: warning: implicit declaration of function 'scaley_f'; did you mean 'scanf'? [-Wimplicit-function-declaration]
+     scaley_f();
+     ^~~~~~~~
+     scanf
+../src/timer.c:112:36: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+     LCD_ShowString(565,43,80,20,24,"...");
+                                    ^~~~~
+In file included from ../src/timer.c:13:0:
+../src/lcd/lcd.h:178:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);  //显示一个字符串,12/16字体
+      ^~~~~~~~~~~~~~
+../src/timer.c:121:5: warning: implicit declaration of function 'scalex_f'; did you mean 'scanf'? [-Wimplicit-function-declaration]
+     scalex_f();
+     ^~~~~~~~
+     scanf
+'Finished building: ../src/timer.c'
+' '
+'Building target: 7_21.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../7_21_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "7_21.elf"  ./src/touch/ctiic.o ./src/touch/delay.o ./src/touch/gt9147.o  ./src/lcd/ILI93.o ./src/lcd/delay.o  ./src/dataprocess.o ./src/gui.o ./src/helloworld.o ./src/platform.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_21.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size 7_21.elf  |tee "7_21.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 163164	   1592	17072644	17237400	1070598	7_21.elf
+'Finished building: 7_21.elf.size'
+' '
+
+21:02:40 Build Finished (took 901ms)
+

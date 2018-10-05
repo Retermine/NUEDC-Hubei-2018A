@@ -1,0 +1,143 @@
+/*
+ * frenquency.c
+ *
+ *  Created on: 2018Äê7ÔÂ14ÈÕ
+ *      Author: hxflq
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "lcd/lcd.h"
+#include "lcd/delay.h"
+#include "tftcontroller.h"
+#include "lcd/gui.h"
+#include "xil_io.h"
+#include "touch/gt9147.h"
+#include "gui.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_assert.h"
+#include "math.h"
+#include "xgpio.h"
+#include "fx.h"
+#include "lcd/lcd.h"
+#include "dx.h"
+#include "tx.h"
+int i=0;
+float interval[10];
+void gui_freq()
+{
+	LCD_Clear(BLACK);
+	LCD_DrawRectangle(25,25,455,775,RED);
+	LCD_DrawRectangle(27,27,453,773,BLACK);
+	LCD_ShowString(125, 200, "frquency", RED);
+	LCD_ShowString(140, 400, "duty", RED);
+	LCD_ShowString(125, 600, "interval", RED);
+	LCD_ShowString(370,500,"%",RED);
+
+}
+volatile char fz [1000]={0};
+void read_freq()
+{
+	int fx,fr;
+	fr=FX_mReadReg(XPAR_FREQUENCY_FX_0_S00_AXI_BASEADDR, FX_S00_AXI_SLV_REG0_OFFSET);
+	fx=FX_mReadReg(XPAR_FREQUENCY_FX_0_S00_AXI_BASEADDR, FX_S00_AXI_SLV_REG1_OFFSET);
+
+	float f;
+	f=200000000.0*fx/fr;
+	if(f>0.9&&f<=999.9)
+	{
+		sprintf(fz,"%f",f);
+	LCD_Fill(100,290,430,325,BLACK);
+	LCD_ShowString(125,300,fz,RED);
+	LCD_Fill(370,290,450,325,BLACK);
+	LCD_ShowString(370,300,"Hz",RED);
+	delay_ms(10);
+	}
+
+	if(f>999.9&&f<=999999.9)
+	{
+		f=f/1000;
+	sprintf(fz,"%f",f);
+	LCD_Fill(100,290,430,325,BLACK);
+	LCD_ShowString(125,300,fz,RED);
+	LCD_Fill(370,290,450,325,BLACK);
+		LCD_ShowString(370,300,"kHz",RED);
+	delay_ms(10);
+	}
+	if(f>999999.9&&f<51000000.0)
+		{
+			f=f/1000000;
+		sprintf(fz,"%f",f);
+		LCD_Fill(100,290,430,325,BLACK);
+		LCD_ShowString(125,300,fz,RED);
+		LCD_Fill(370,290,450,325,BLACK);
+		LCD_ShowString(370,300,"MHz",RED);
+		delay_ms(10);
+		}
+	int dx,dr;
+	dx=DX_mReadReg(XPAR_FREQUENCY_DX_0_S00_AXI_BASEADDR, DX_S00_AXI_SLV_REG0_OFFSET);
+	dr=DX_mReadReg(XPAR_FREQUENCY_DX_0_S00_AXI_BASEADDR, DX_S00_AXI_SLV_REG1_OFFSET);
+	float d;
+	d=100.0*dx/dr;
+	sprintf(fz,"%f",d);
+		LCD_Fill(125,490,350,525,BLACK);
+		LCD_ShowString(125,500,fz,RED);
+		delay_ms(10);
+	for(i=0;i<10;i++)
+	{
+
+		int t1,t2,t3,t4,t5,t6;
+	t1=TX_mReadReg(XPAR_FREQUENCY_TX_0_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	t2=TX_mReadReg(XPAR_FREQUENCY_TX_1_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	t3=TX_mReadReg(XPAR_FREQUENCY_TX_2_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	t4=TX_mReadReg(XPAR_FREQUENCY_TX_3_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	t5=TX_mReadReg(XPAR_FREQUENCY_TX_4_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	t6=TX_mReadReg(XPAR_FREQUENCY_TX_5_S00_AXI_BASEADDR, TX_S00_AXI_SLV_REG0_OFFSET)-2;
+	int tall;
+	tall=(t1+t2+t3+t4+t5+t6)/6;
+	float inter;
+	inter=tall*5.00;
+	interval[i]=inter;
+	inter=(interval[0]+interval[1]+interval[2]+interval[3]+interval[4]+interval[5]+interval[6]+interval[7]+interval[8]+interval[9])/10;
+			if(inter>0&&inter<1000&&i==9)
+			{
+//				inter=(interval[0]+interval[1]+interval[2]+interval[3]+interval[4]+interval[5])/10;
+				sprintf(fz,"%f",inter);
+				LCD_Fill(100,690,400,725,BLACK);
+				LCD_ShowString(125,700,fz,RED);
+				LCD_Fill(370,690,450,725,BLACK);
+				LCD_ShowString(370,700,"ns",RED);
+				delay_ms(10);
+
+			}
+			if(inter>=1000&&inter<=1000000&&i==9)
+						{
+//				inter=(interval[0]+interval[1]+interval[2]+interval[3]+interval[4]+interval[5]+interval[6]+interval[7]+interval[8]+interval[9])/10;
+							inter=inter/1000;
+							sprintf(fz,"%f",inter);
+							LCD_Fill(100,690,400,725,BLACK);
+							LCD_ShowString(125,700,fz,RED);
+							LCD_Fill(370,690,450,725,BLACK);
+							LCD_ShowString(370,700,"us",RED);
+							delay_ms(10);
+
+						}
+			if(inter>1000000&&inter<1000000000&&i==9)
+						{
+//				inter=(interval[0]+interval[1]+interval[2]+interval[3]+interval[4]+interval[5])/6;
+							inter=inter/1000000;
+							sprintf(fz,"%f",inter);
+							LCD_Fill(100,690,400,725,BLACK);
+							LCD_ShowString(125,700,fz,RED);
+							LCD_Fill(370,690,450,725,BLACK);
+							LCD_ShowString(370,700,"ms",RED);
+							delay_ms(10);
+
+						}
+			delay_ms(25);
+	}
+}
+

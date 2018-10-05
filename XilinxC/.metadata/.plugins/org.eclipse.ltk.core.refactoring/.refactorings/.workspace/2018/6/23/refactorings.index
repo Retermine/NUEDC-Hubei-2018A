@@ -1,0 +1,3 @@
+1528022502167	Delete resource 'boot_loader'
+1528022505258	Delete resource 'boot_loader_bsp'
+1528022648919	Delete resource 'bootloader/src/helloworld.c'
